@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Aaru</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Georgia', sans-serif;
+            background: linear-gradient(135deg, #b19cd9, #ffafbd);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            text-align: center;
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 30px 20px;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .header::before {
+            content: "💖";
+            font-size: 3em;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Content */
+        .content {
+            padding: 20px;
+        }
+
+        .message {
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: #f1e8ff;
+            margin-bottom: 20px;
+        }
+
+        .heart-divider {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .heart-divider::before,
+        .heart-divider::after {
+            content: "💖";
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        .forgive-button {
+            background: #b19cd9;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .forgive-button:hover {
+            background: #9575cd;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            font-size: 0.95em;
+            color: #ddd;
+            border-radius: 0 0 20px 20px;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Apology Container -->
+    <div class="container">
+        <header class="header">
+            <h1>I'm Sorry, Aaru</h1>
+            <p>You are my heart and my soul. Please forgive me.</p>
+        </header>
+
+        <section class="content">
+            <p class="message">
+                My dearest Aaru,<br><br>
+                I can't express how sorry I am for hurting you. You mean the world to me, and I never want to see you upset. Please know that I deeply regret my actions, and I promise to do everything I can to make things right.  
+                You are my light, my love, and my everything.  
+            </p>
+            <div class="heart-divider"></div>
+            <button class="forgive-button" onclick="alert('Thank you for forgiving me, Aaru 💖')">Forgive Me</button>
+        </section>
+
+        <footer class="footer">
+            <p>With endless love, JAI</p>
+        </footer>
+    </div>
+
+    <script>
+        /* Particles.js Configuration */
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#b19cd9"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#b19cd9"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true
+                },
+                "size": {
+                    "value": 6,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#b19cd9",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
